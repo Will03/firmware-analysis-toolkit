@@ -34,8 +34,8 @@ def get_info():
         firm_name = sys.argv[1]
         print "[?] Enter the name or absolute path of the firmware you want to analyse : " + firm_name
     else:
-        firm_name = raw_input("[?] Enter the name or absolute path of the firmware you want to analyse : ")
-    firm_brand = raw_input("[?] Enter the brand of the firmware : ")
+        firm_name = sys.argv[1]
+    firm_brand = '123'
     return (firm_name, firm_brand)
 
 
@@ -97,7 +97,7 @@ def final_run(image_id):
     print "[+] Running the firmware finally"
     run_cmd = "sudo " + firmadyne_path + "/scratch/" + image_id + "/run.sh"
     print "[+] command line : " + run_cmd
-    raw_input("[*] Press ENTER to run the firmware...")
+    #raw_input("[*] Press ENTER to run the firmware...")
     child = pexpect.spawn(run_cmd)
     child.sendline(root_pass)
     child.interact()    
