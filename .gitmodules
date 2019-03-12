@@ -7,3 +7,6 @@
 [submodule "firmwalker"]
 	path = firmwalker
 	url = https://github.com/craigz28/firmwalker
+[submodule "firmadyne"]
+	path = firmadyne
+	url = https://github.com/Will03/firmadyne
